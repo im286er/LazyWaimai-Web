@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    background: url(../images/login_bgx.gif);
+}
+
+#login-box {
+    width: 403px;
+    height: 375px;
+    margin: 100px auto 0;
+}
+
+#login-box .logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#login-box .logo img {
+    width: 196px;
+    height: 46px;
+    border: none;
+}
+
+#login-box .border {
+    background: url(../images/login_border_bg.png) no-repeat;
+    width: 403px;
+    height: 302px;
+    overflow: hidden;
+}
+
+#login-box .border p.info-tip {
+    text-align: center;
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+    margin: 15px 0;
+    color: #00aa00;
+    display: block;
+}
+
+#login-box .border p.has-error {
+    color: #a94442;
+}
+
+#login-box .border form {
+    padding: 10px 40px;
+}
