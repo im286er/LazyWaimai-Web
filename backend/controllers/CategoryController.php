@@ -139,6 +139,6 @@ class CategoryController extends Controller {
             Yii::$app->session->setFlash('danger', $e->getMessage());
         }
 
-        return $this->redirect('category/index');
+        return $this->redirect(['category/index']);
     }
 }

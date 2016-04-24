@@ -183,6 +183,6 @@ class ProductController extends Controller {
             Yii::$app->session->setFlash('danger', '删除商品失败。');
         }
 
-        return $this->redirect('product/index');
+        return $this->redirect(['product/index']);
     }
 }

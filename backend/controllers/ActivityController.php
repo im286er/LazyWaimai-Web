@@ -180,6 +180,6 @@ class ActivityController extends Controller {
             Yii::$app->session->setFlash('danger', '删除商品失败。');
         }
 
-        return $this->redirect('index');
+        return $this->redirect(['activity/index']);
     }
 }
