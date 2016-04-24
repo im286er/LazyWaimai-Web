@@ -84,7 +84,7 @@ class UserController extends Controller {
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect('site/index');
+            return $this->redirect(['site/index']);
         } else {
             return $this->render('login', [
                 'model' => $model,
@@ -97,7 +97,7 @@ class UserController extends Controller {
      */
     public function actionLogout() {
         if (Yii::$app->user->logout()) {
-            return $this->redirect('user/login');
+            return $this->redirect(['user/login']);
         } else {
             return $this->goBack();
         }
