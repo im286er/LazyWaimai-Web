@@ -18,7 +18,7 @@ $this->title = '登录';
 ?>
 <div id="login-box">
     <div class="logo">
-        <?= Html::img('images/logo.png') ?>
+        <?= Html::img('@web/images/logo.png') ?>
     </div>
     <div class="border">
         <?php $form = ActiveForm::begin([
