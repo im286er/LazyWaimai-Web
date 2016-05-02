@@ -7,13 +7,12 @@ body{
 
 #login-box {
     width: 403px;
-    height: 375px;
     margin: 100px auto 0;
 }
 
 #login-box .logo {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 #login-box .logo img {
@@ -26,23 +25,17 @@ body{
     background: url(../images/login_border_bg.png) no-repeat;
     width: 403px;
     height: 302px;
-    overflow: hidden;
 }
 
-#login-box .border p.info-tip {
-    text-align: center;
-    height: 14px;
-    line-height: 14px;
-    font-size: 14px;
-    margin: 15px 0;
-    color: #00aa00;
+#login-box .border {
+    padding: 30px 40px;
+}
+
+#login-box .border form#mobile-login-form {
     display: block;
 }
 
-#login-box .border p.has-error {
-    color: #a94442;
-}
-
-#login-box .border form {
-    padding: 10px 40px;
+#login-box .border form#account-login-form {
+    opacity: 0;
+    display: none;
 }

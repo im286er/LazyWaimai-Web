@@ -4,6 +4,7 @@ namespace restapi\modules\v1\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%cart_discount}}".
@@ -24,18 +25,25 @@ class CartDiscount extends ActiveRecord {
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return '{{%cart_discount}}';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function behaviors() {
         return [
-            [['cart_id', 'activity_id', 'name', 'price', 'description', 'icon_name', 'icon_color', 'created_at', 'updated_at'], 'required'],
+            TimestampBehavior::className()
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function rules() {
+        return [
+            [['cart_id', 'activity_id', 'name', 'price', 'description', 'icon_name', 'icon_color'], 'required'],
             [['cart_id', 'activity_id', 'created_at', 'updated_at'], 'integer'],
             [['price'], 'number'],
             [['name'], 'string', 'max' => 50],
@@ -47,8 +55,7 @@ class CartDiscount extends ActiveRecord {
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => '主键ID',
             'cart_id' => '购物车ID',
@@ -61,5 +68,15 @@ class CartDiscount extends ActiveRecord {
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
         ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function fields() {
+        $fields = parent::fields();
+        unset($fields['created_at'], $fields['updated_at']);
+
+        return $fields;
     }
 }

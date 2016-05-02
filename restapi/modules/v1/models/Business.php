@@ -92,4 +92,14 @@ class Business extends ActiveRecord {
             'created_at' => '创建时间',
         ];
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function fields() {
+        $fields = parent::fields();
+        unset($fields['booking_times'], $fields['created_at'], $fields['updated_at']);
+
+        return $fields;
+    }
 }

@@ -3,12 +3,14 @@
 namespace restapi\modules\v1\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "{{%order}}".
  *
  * @property integer $id
  * @property integer $cart_id
+ * @property integer $business_id
  * @property integer $user_id
  * @property string $order_num
  * @property integer $status
@@ -24,8 +26,7 @@ use Yii;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Order extends \yii\db\ActiveRecord
-{
+class Order extends ActiveRecord {
 
     const STATUS_WAIT_SUBMIT = -1;  // 待提交，默认状态
     const STATUS_WAIT_PAYMENT = 0;  // 待支付
@@ -41,19 +42,17 @@ class Order extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return '{{%order}}';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            [['cart_id', 'user_id', 'order_num', 'status', 'origin_price', 'discount_price', 'total_price', 'consignee', 'phone', 'address', 'pay_method', 'created_at', 'updated_at'], 'required'],
-            [['cart_id', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['cart_id', 'business_id', 'user_id', 'order_num', 'status', 'origin_price', 'discount_price', 'total_price', 'consignee', 'phone', 'address', 'pay_method'], 'required'],
+            [['cart_id', 'business_id', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
             [['origin_price', 'discount_price', 'total_price'], 'number'],
             [['pay_method'], 'string'],
             [['order_num'], 'string', 'max' => 50],
@@ -66,14 +65,14 @@ class Order extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => '订单ID',
             'cart_id' => '购物车ID',
+            'business_id' => '商铺Id',
             'user_id' => '用户ID',
             'order_num' => '订单编号',
-            'status' => '订单状态,-1=待提交,0=待支付,1=待接单，2=待发货，3=待送达，4=待确认，5=已完成',
+            'status' => '订单状态',
             'origin_price' => '商品原价',
             'discount_price' => '优惠价格',
             'total_price' => '合计价格',
@@ -84,7 +83,19 @@ class Order extends \yii\db\ActiveRecord
             'remark' => '备注',
             'booked_at' => '预订时间',
             'created_at' => '下单时间',
-            'updated_at' => 'Updated At',
+            'updated_at' => '更新时间',
         ];
+    }
+
+    public function extraFields() {
+        return ['business_info', 'cart_info'];
+    }
+
+    public function getBusiness_info() {
+        return $this->hasOne(Business::className(), ['id' => 'business_id']);
+    }
+
+    public function getCart_info() {
+        return $this->hasOne(Cart::className(), ['id' => 'cart_id']);
     }
 }

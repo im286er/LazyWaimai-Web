@@ -135,7 +135,7 @@ class Admin extends ActiveRecord implements IdentityInterface {
      * @return Admin|null
      */
     public static function findByUsername($username) {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['user_name' => $username, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**

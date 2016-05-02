@@ -38,9 +38,9 @@ $route = Yii::$app->requestedAction->uniqueId;
                     <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><?= Html::a('<i class="glyphicon glyphicon-user"></i> 我的资料', ['user/view']) ?></li>
-                    <li><?= Html::a('<i class="glyphicon glyphicon-phone-alt"></i> 修改手机', ['user/update']) ?></li>
-                    <li><?= Html::a('<i class="glyphicon glyphicon-lock"></i> 修改密码', ['user/update']) ?></li>
+                    <li><?= Html::a('<i class="glyphicon glyphicon-user"></i> 我的资料', ['user/profile']) ?></li>
+                    <li><?= Html::a('<i class="glyphicon glyphicon-phone-alt"></i> 修改手机', ['user/update-phone']) ?></li>
+                    <li><?= Html::a('<i class="glyphicon glyphicon-lock"></i> 修改密码', ['user/update-password']) ?></li>
                     <li class="divider"></li>
                     <li><?= Html::a('<i class="glyphicon glyphicon-log-out"></i> 注销登录', ['user/logout']) ?></li>
                 </ul>

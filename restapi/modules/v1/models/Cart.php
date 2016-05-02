@@ -4,6 +4,7 @@ namespace restapi\modules\v1\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%cart}}".
@@ -25,6 +26,15 @@ class Cart extends ActiveRecord {
      */
     public static function tableName() {
         return '{{%cart}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors() {
+        return [
+            TimestampBehavior::className()
+        ];
     }
 
     /**
@@ -56,27 +66,27 @@ class Cart extends ActiveRecord {
         ];
     }
 
-    public function extraFields() {
-        return ['last_address', 'business_info', 'shopping_product_list', 'extra_fee_list', 'discount_info_list'];
-    }
-
-    public function getLast_address() {
-        return $this->hasOne(Address::className(), ['id' => 'last_address_id']);
-    }
-
-    public function getBusiness_info() {
-        return $this->hasOne(Business::className(), ['id' => 'business_id']);
-    }
-
-    public function getShopping_product_list() {
-        return CartProduct::find()->where(['cart_id' => $this->id])->all();
-    }
-
-    public function getExtra_fee_list() {
-        return CartExtra::find()->where(['cart_id' => $this->id])->all();
-    }
-
-    public function getDiscount_info_list() {
-        return CartDiscount::find()->where(['cart_id' => $this->id])->all();
+    /**
+     * @inheritdoc
+     */
+    public function fields() {
+        return [
+            'id',
+            'origin_price',
+            'discount_price',
+            'total_price',
+            'business_info' => function ($model) {
+                return Business::findOne($model->business_id);
+            },
+            'product_list' => function($model) {
+                return CartProduct::find()->where(['cart_id' => $model->id])->all();
+            },
+            'extra_fee_list' => function($model) {
+                return CartExtra::find()->where(['cart_id' => $model->id])->all();
+            },
+            'discount_list' => function($model) {
+                return CartDiscount::find()->where(['cart_id' => $model->id])->all();
+            },
+        ];
     }
 }

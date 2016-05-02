@@ -2,16 +2,20 @@
 
 namespace backend\controllers;
 
-use backend\models\Admin;
+use backend\models\SendChangePhoneSmsForm;
 use Yii;
 use yii\helpers\Json;
 use yii\web\Controller;
-use backend\models\LoginForm;
 use yii\filters\VerbFilter;
+use backend\models\Admin;
 use yii\filters\AccessControl;
 use backend\models\LoginSendSmsForm;
+use backend\models\AccountLoginForm;
+use backend\models\PhoneLoginForm;
+use backend\models\UpdatePasswordForm;
+use backend\models\VerifyPasswordForm;
+use backend\models\ChangePhoneForm;
 use yii\web\NotFoundHttpException;
-
 
 /**
  * 操作用户相关的控制器
@@ -55,7 +59,7 @@ class UserController extends Controller {
     /**
      * 个人资料的操作
      */
-    public function actionView() {
+    public function actionProfile() {
         /* @var $model Admin */
         $model = Admin::findOne(Yii::$app->user->id);
 
@@ -71,7 +75,7 @@ class UserController extends Controller {
             }
         }
 
-        return $this->render('form', [
+        return $this->render('profile', [
             'model' => $model
         ]);
     }
@@ -82,14 +86,7 @@ class UserController extends Controller {
     public function actionLogin() {
         $this->layout = 'base';
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['site/index']);
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
+        return $this->render('login');
     }
 
     /**
@@ -104,10 +101,10 @@ class UserController extends Controller {
     }
 
     /**
-     * 通过ajax发送验证码的操作
+     * 通过ajax发送登录的验证码的操作
      * @return array
      */
-    public function actionSendSms() {
+    public function actionSendLoginSms() {
         $model = new LoginSendSmsForm();
         $model->phone = Yii::$app->request->post('phone');
 
@@ -117,5 +114,106 @@ class UserController extends Controller {
             $message = $model->getFirstError('phone');
             echo Json::encode(['status' => 'err', 'message' => $message]);
         }
+    }
+
+    /**
+     * 通过ajax进行手机号登录的操作
+     * @return array
+     */
+    public function actionPhoneLogin() {
+        $model = new PhoneLoginForm();
+
+        if ($model->load(Yii::$app->request->post(), '') && $model->login()) {
+            return $this->redirect(['site/index']);
+        } else {
+            $message = $model->getFirstError('code');
+            echo Json::encode(['status' => 'err', 'message' => $message]);
+        }
+    }
+
+    /**
+     * 通过ajax进行账户登录的操作
+     * @return array
+     */
+    public function actionAccountLogin() {
+        $model = new AccountLoginForm();
+
+        if ($model->load(Yii::$app->request->post(), '') && $model->login()) {
+            return $this->redirect(['site/index']);
+        } else {
+            $message = $model->getFirstError('password');
+            echo Json::encode(['status' => 'err', 'message' => $message]);
+        }
+    }
+
+    /**
+     * 修改密码的操作
+     * @return array
+     */
+    public function actionUpdatePassword() {
+        $model = new UpdatePasswordForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->updatePassword()) {
+            Yii::$app->session->setFlash('success', '密码修改成功。');
+            return $this->refresh();
+        }
+
+        return $this->render('update-password', [
+            'model' => $model
+        ]);
+    }
+
+    /**
+     * 通过ajax发送修改手机号的验证码的操作
+     * @return array
+     */
+    public function actionSendUpdatePhoneSms() {
+        $model = new SendChangePhoneSmsForm();
+        $model->phone = Yii::$app->request->post('phone');
+
+        if ($model->sendSms()) {
+            echo Json::encode(['status' => 'ok']);
+        } else {
+            $message = $model->getFirstError('phone');
+            echo Json::encode(['status' => 'err', 'message' => $message]);
+        }
+    }
+
+    /**
+     * 修改手机号的操作
+     * @param string $step
+     * @return array
+     */
+    public function actionUpdatePhone($step = '1') {
+        $params = ['step' => $step];
+
+        if ($step === '1') {
+            $verifyPasswordForm = new VerifyPasswordForm();
+
+            if ($verifyPasswordForm->load(Yii::$app->request->post()) && $verifyPasswordForm->validate()) {
+                Yii::$app->session['passwordVerified'] = true;
+
+                return $this->redirect(['user/update-phone', 'step' => '2']);
+            }
+
+            /** @var $admin Admin */
+            $admin = Yii::$app->user->identity;
+
+            $params['phone'] = $admin->phone;
+            $params['verifyPasswordForm'] = $verifyPasswordForm;
+        } elseif ($step === '2' && Yii::$app->session->has('passwordVerified') && Yii::$app->session['passwordVerified']) {
+            $changeMobileForm = new ChangePhoneForm();
+
+            if ($changeMobileForm->load(Yii::$app->request->post()) && $changeMobileForm->change()) {
+                Yii::$app->session->setFlash('success', '手机更换成功！');
+                return $this->redirect(['user/update-phone']);
+            }
+
+            $params['changeMobileForm'] = $changeMobileForm;
+        } else {
+            return $this->redirect(['user/update-phone']);
+        }
+
+        return $this->render('update-phone', $params);
     }
 }

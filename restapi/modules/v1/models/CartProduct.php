@@ -4,6 +4,7 @@ namespace restapi\modules\v1\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%cart_product}}".
@@ -25,6 +26,15 @@ class CartProduct extends ActiveRecord {
      */
     public static function tableName() {
         return '{{%cart_product}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors() {
+        return [
+            TimestampBehavior::className()
+        ];
     }
 
     /**
@@ -57,29 +67,12 @@ class CartProduct extends ActiveRecord {
     }
 
     /**
-     * 处理购物车里选购的商品
-     * @param SettleBody $settleBody
-     * @return CartProduct[]
+     * @inheritdoc
      */
-    public static function handleCartProduct($settleBody) {
-        $cartProductList = [];
-        if ($settleBody->shoppingProductList != null
-            && count($settleBody->shoppingProductList) > 0) {
-            foreach ($settleBody->shoppingProductList as $shoppingProduct) {
-                /** @var $product Product */
-                $product = Product::findOne($shoppingProduct->id);
+    public function fields() {
+        $fields = parent::fields();
+        unset($fields['created_at'], $fields['updated_at']);
 
-                $cartProduct = new CartProduct();
-                $cartProduct->product_id = $product->id;
-                $cartProduct->name = $product->name;
-                $cartProduct->quantity = $shoppingProduct->quantity;
-                $cartProduct->unit_price = $product->price;
-                $cartProduct->total_price = $product->price * $shoppingProduct->quantity;
-
-                array_push($cartProductList, $cartProduct);
-            }
-        }
-
-        return $cartProductList;
+        return $fields;
     }
 }

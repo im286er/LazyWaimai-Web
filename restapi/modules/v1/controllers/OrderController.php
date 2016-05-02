@@ -1,26 +1,29 @@
 <?php
 
-namespace app\modules\v1\controllers;
+namespace restapi\modules\v1\controllers;
 
-
-use restapi\modules\v1\models\CartExtra;
-use restapi\modules\v1\models\CartProduct;
+use restapi\modules\v1\decorators\BookingTimeSettleDecorator;
 use yii;
+use yii\helpers\Json;
 use yii\web\ForbiddenHttpException;
 use yii\web\BadRequestHttpException;
 use yii\web\ServerErrorHttpException;
 use yii\rest\ActiveController;
 use yii\data\ActiveDataProvider;
-use restapi\modules\v1\models\SettleBody;
-use restapi\modules\v1\models\SettleResult;
 use restapi\components\HttpTokenAuth;
 use restapi\modules\v1\models\Order;
-use JMS\Serializer\SerializerBuilder;
-
+use restapi\modules\v1\beans\SettleBody;
+use restapi\modules\v1\beans\SettleResult;
+use restapi\modules\v1\context\CartSettleHandler;
+use restapi\modules\v1\decorators\BasicSettleDecorator;
+use restapi\modules\v1\decorators\CartInfoSettleDecorator;
+use restapi\modules\v1\decorators\DiscountSettleDecorator;
+use restapi\modules\v1\decorators\ExtraFeeSettleDecorator;
+use restapi\modules\v1\decorators\ProductSettleDecorator;
 
 class OrderController extends ActiveController {
 
-    public $modelClass = 'app\modules\v1\models\Order';
+    public $modelClass = 'restapi\modules\v1\models\Order';
 
     public $serializer = [
         'class' => 'yii\rest\Serializer',
@@ -62,6 +65,18 @@ class OrderController extends ActiveController {
     }
 
     /**
+     * @inheritdoc
+     */
+    protected function verbs() {
+        return [
+            'index' => ['GET'],
+            'view' => ['GET'],
+            'create' => ['POST'],
+            'check' => ['POST']
+        ];
+    }
+
+    /**
      * 定制DataProvider
      * @return ActiveDataProvider
      */
@@ -82,18 +97,30 @@ class OrderController extends ActiveController {
      * @throws ServerErrorHttpException
      */
     public function actionCheck() {
-        // 将传递的json数据转化为指定的类对象
-        $serializer = SerializerBuilder::create()->build();
-        /** @var $settleBody SettleBody */
-        $settleBody = $serializer->deserialize(Yii::$app->request->rawBody,
-            'restapi\modules\v1\models\SettleBody', 'json');
+        $businessId = Yii::$app->request->getBodyParam('business_id');
+        $payMethod = Yii::$app->request->getBodyParam('pay_method');
+        $shoppingProductJson = Yii::$app->request->getBodyParam('product_list');
+        if (empty($businessId)) {
+            throw new BadRequestHttpException("缺少必{$businessId}要的参数:business_id");
+        } else if (empty($payMethod)) {
+            throw new BadRequestHttpException('缺少必要的参数:pay_method');
+        } else if (empty($shoppingProductJson)) {
+            throw new BadRequestHttpException('缺少必要的参数:shopping_product_list');
+        }
+        $settleBody = new SettleBody();
+        $settleBody->businessId = $businessId;
+        $settleBody->payMethod = $payMethod;
+        $settleBody->shoppingProductList = Json::decode($shoppingProductJson);
 
-        $cartProductList = CartProduct::handleCartProduct($settleBody);
-
-        $cartExtraFeeList = CartExtra::handleCartExtraFee($settleBody);
-
-        // 订单结算结果
-        $settleResult = new SettleResult($settleBody);
+        // 调用购物车结算装配器来进行结算
+        $settleHandler = new CartSettleHandler($settleBody);
+        $settleHandler->addDecorator(new BasicSettleDecorator());
+        $settleHandler->addDecorator(new ProductSettleDecorator());
+        $settleHandler->addDecorator(new ExtraFeeSettleDecorator());
+        $settleHandler->addDecorator(new DiscountSettleDecorator());
+        $settleHandler->addDecorator(new BookingTimeSettleDecorator());
+        $settleHandler->addDecorator(new CartInfoSettleDecorator());
+        $settleResult = $settleHandler->handleCartSettle();
 
         return $settleResult;
     }

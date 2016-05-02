@@ -1,6 +1,6 @@
 <?php
 
-namespace restapi\modules\v1\models;
+namespace restapi\modules\v1\beans;
 
 class ShoppingProduct {
     /**

@@ -1,6 +1,10 @@
 <?php
 
-namespace restapi\modules\v1\models;
+namespace restapi\modules\v1\discount;
+
+use restapi\modules\v1\beans\DiscountInfo;
+use restapi\modules\v1\beans\SettleBody;
+use restapi\modules\v1\beans\DiscountResult;
 
 /**
  * 优惠的代理类
@@ -29,10 +33,9 @@ class DiscountContext {
      * 处理活动优惠的代理方法
      * @param DiscountInfo $discountInfo
      * @param SettleBody $settleBody
-     * @param SettleResult $settleResult
      * @return DiscountResult $discountResult
      */
-    public function handleDiscount($discountInfo, $settleBody, $settleResult) {
-        return $this->discountManager->handleDiscount($discountInfo, $settleBody, $settleResult);
+    public function handleDiscount($discountInfo, $settleBody) {
+        return $this->discountManager->handleDiscount($discountInfo, $settleBody);
     }
 }

@@ -67,4 +67,15 @@ class Address extends ActiveRecord {
             'updated_at' => 'Updated At',
         ];
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function fields() {
+        $fields = parent::fields();
+        unset($fields['created_at'], $fields['updated_at']);
+
+        return $fields;
+    }
+
 }

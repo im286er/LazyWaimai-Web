@@ -6,6 +6,7 @@ use Yii;
 use yii\db\Query;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
+use restapi\modules\v1\beans\DiscountInfo;
 
 /**
  * This is the model class for table "business_activity".
@@ -86,14 +87,15 @@ class BusinessActivity extends ActiveRecord {
         $discountInfoList = [];
         foreach ($data as $value) {
             $discountInfo = new DiscountInfo();
-            $discountInfo->setId($value['id']);
-            $discountInfo->setName($value['name']);
-            $discountInfo->setCode($value['code']);
-            $discountInfo->setAttribute($value['attribute']);
-            $discountInfo->setIconName($value['icon_name']);
-            $discountInfo->setIconColor($value['icon_color']);
-            $discountInfo->setIsShare($value['is_share']);
-            $discountInfo->setPriority($value['priority']);
+            $discountInfo->id = $value['id'];
+            $discountInfo->name = $value['name'];
+            $discountInfo->code = $value['code'];
+            $discountInfo->attribute = $value['attribute'];
+            $discountInfo->iconName = $value['icon_name'];
+            $discountInfo->iconColor = $value['icon_color'];
+            $discountInfo->isShare = $value['is_share'] === 1 ? true : false;
+            $discountInfo->priority = $value['priority'];
+
             array_push($discountInfoList, $discountInfo);
         }
 

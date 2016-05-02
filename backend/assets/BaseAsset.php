@@ -14,7 +14,8 @@ class BaseAsset extends AssetBundle {
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset',
         'yii\web\YiiAsset',
-        'rmrevin\yii\fontawesome\cdn\AssetBundle'
+        'rmrevin\yii\fontawesome\cdn\AssetBundle',
+        'backend\assets\ToasterAsset'
     ];
 
     /**
