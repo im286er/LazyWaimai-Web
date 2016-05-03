@@ -2,7 +2,6 @@
 
 namespace restapi\modules\v1\controllers;
 
-use restapi\modules\v1\decorators\BookingTimeSettleDecorator;
 use yii;
 use yii\helpers\Json;
 use yii\web\ForbiddenHttpException;
@@ -10,16 +9,17 @@ use yii\web\BadRequestHttpException;
 use yii\web\ServerErrorHttpException;
 use yii\rest\ActiveController;
 use yii\data\ActiveDataProvider;
-use restapi\components\HttpTokenAuth;
+use yii\filters\auth\HttpBearerAuth;
 use restapi\modules\v1\models\Order;
-use restapi\modules\v1\beans\SettleBody;
-use restapi\modules\v1\beans\SettleResult;
-use restapi\modules\v1\context\CartSettleHandler;
-use restapi\modules\v1\decorators\BasicSettleDecorator;
-use restapi\modules\v1\decorators\CartInfoSettleDecorator;
-use restapi\modules\v1\decorators\DiscountSettleDecorator;
-use restapi\modules\v1\decorators\ExtraFeeSettleDecorator;
-use restapi\modules\v1\decorators\ProductSettleDecorator;
+use restapi\beans\SettleBody;
+use restapi\beans\SettleResult;
+use restapi\settle\CartSettleHandler;
+use restapi\settle\BasicSettleDecorator;
+use restapi\settle\CartInfoSettleDecorator;
+use restapi\settle\DiscountSettleDecorator;
+use restapi\settle\ExtraFeeSettleDecorator;
+use restapi\settle\ProductSettleDecorator;
+use restapi\settle\BookingTimeSettleDecorator;
 
 class OrderController extends ActiveController {
 
@@ -37,7 +37,7 @@ class OrderController extends ActiveController {
     public function behaviors() {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
-            'class' => HttpTokenAuth::className(),
+            'class' => HttpBearerAuth ::className(),
         ];
 
         return $behaviors;
@@ -84,7 +84,7 @@ class OrderController extends ActiveController {
         return new ActiveDataProvider([
             'query' => Order::find()->where([
                 'and',
-                ['user_id' => Yii::$app->user->getId()],
+                ['user_id' => Yii::$app->user->id],
                 ['>', 'status', Order::STATUS_WAIT_SUBMIT]
             ])->orderBy('created_at desc'),
         ]);

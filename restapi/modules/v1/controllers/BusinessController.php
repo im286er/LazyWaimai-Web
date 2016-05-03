@@ -7,7 +7,6 @@ use yii\rest\ActiveController;
 use yii\data\ActiveDataProvider;
 use restapi\modules\v1\models\Business;
 
-
 class BusinessController extends ActiveController {
 
     public $modelClass = 'restapi\modules\v1\models\Business';

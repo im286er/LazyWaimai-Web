@@ -2,6 +2,7 @@
 
 namespace restapi\modules\v1;
 
+use common\helpers\Constants;
 use Yii;
 use yii\base\Module;
 use yii\web\NotFoundHttpException;
@@ -17,21 +18,12 @@ class ApiModule extends Module {
     /**
      * @inheritdoc
      */
-    public function init() {
-        parent::init();
-
-        Yii::configure($this, require(__DIR__.'/config/main.php'));
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function beforeAction($action) {
         if (parent::beforeAction($action)) {
-            $httpTimeStamp = Yii::$app->request->headers->get('Http-Timestamp');
-            $versionName = Yii::$app->request->headers->get('Http-App-Version');
-            $deviceId = Yii::$app->request->headers->get('Http-Device-Id');
-            $requestType = Yii::$app->request->headers->get('Http-Request-Type');
+            $httpTimeStamp = Yii::$app->request->headers->get(Constants::HTTP_TIMESTAMP);
+            $versionName = Yii::$app->request->headers->get(Constants::HTTP_APP_VERSION);
+            $deviceId = Yii::$app->request->headers->get(Constants::HTTP_DEVICE_ID);
+            $requestType = Yii::$app->request->headers->get(Constants::HTTP_DEVICE_TYPE);
 
             if ($httpTimeStamp === null || $versionName === null
                 || $deviceId === null || $requestType === null) {

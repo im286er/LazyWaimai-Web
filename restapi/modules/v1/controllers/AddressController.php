@@ -7,7 +7,7 @@ use yii\rest\ActiveController;
 use yii\data\ActiveDataProvider;
 use restapi\modules\v1\models\Address;
 use yii\web\ForbiddenHttpException;
-use restapi\components\HttpTokenAuth;
+use yii\filters\auth\HttpBearerAuth;
 
 class AddressController extends ActiveController {
 
@@ -20,7 +20,7 @@ class AddressController extends ActiveController {
     public function behaviors() {
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
-            'class' => HttpTokenAuth::className(),
+            'class' => HttpBearerAuth::className(),
         ];
 
         return $behaviors;

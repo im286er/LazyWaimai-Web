@@ -1,0 +1,1224 @@
+2016-05-03 15:12:26 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:55
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:12:26 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0c257927-bc19-ca12-f37b-7871e98a366e'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '58551'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462259546.778
+    'REQUEST_TIME' => 1462259546
+]
+2016-05-03 15:12:40 [::1][-][-][error][yii\web\HttpException:500] exception 'yii\web\ServerErrorHttpException' with message '系统异常,登录失败,请重试!' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:12:40 [::1][-][-][info][application] $_POST = [
+    'accountt' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '36'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '27f52eb8-6e0e-2ade-3dab-4d45229de2b8'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '58554'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462259560.579
+    'REQUEST_TIME' => 1462259560
+]
+2016-05-03 15:23:01 [::1][-][-][error][yii\base\ErrorException:2048] exception 'yii\base\ErrorException' with message 'Only variables should be passed by reference' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:54
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php(54): yii\base\ErrorHandler->handleError(2048, 'Only variables ...', '/Users/wanghong...', 54, Array)
+#1 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-05-03 15:23:01 [::1][-][-][info][application] $_POST = [
+    'accountt' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '36'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '1bb59946-07b3-6b15-c324-ceeded85a613'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '58841'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260181.607
+    'REQUEST_TIME' => 1462260181
+]
+2016-05-03 15:24:53 [::1][-][-][error][yii\base\ErrorException:2048] exception 'yii\base\ErrorException' with message 'Only variables should be passed by reference' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:54
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php(54): yii\base\ErrorHandler->handleError(2048, 'Only variables ...', '/Users/wanghong...', 54, Array)
+#1 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-05-03 15:24:53 [::1][-][-][info][application] $_POST = [
+    'accountt' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '36'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '20040f64-fdc7-79bd-4307-d8801970c9b0'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '58852'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260293.334
+    'REQUEST_TIME' => 1462260293
+]
+2016-05-03 15:31:43 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 0' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:55
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php(55): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', '/Users/wanghong...', 55, Array)
+#1 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-05-03 15:31:43 [::1][-][-][info][application] $_POST = [
+    'accountt' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '36'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '72f70dfd-5057-533b-fb74-dabdf06398b7'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59091'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260703.268
+    'REQUEST_TIME' => 1462260703
+]
+2016-05-03 15:32:09 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '账户不能为空.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:32:09 [::1][-][-][info][application] $_POST = [
+    'accountt' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '36'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '50367fb4-2d69-5c40-2ffe-2c858c5af6eb'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59097'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260729.702
+    'REQUEST_TIME' => 1462260729
+]
+2016-05-03 15:32:28 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '密码不能为空.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:32:28 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'passwor' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '34'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '14614d75-4be1-35fd-7596-994e53dda123'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59098'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260748.151
+    'REQUEST_TIME' => 1462260748
+]
+2016-05-03 15:32:31 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:32:31 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e6d6ec45-a327-05c2-b23f-d2a75ecb772e'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59098'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260751.64
+    'REQUEST_TIME' => 1462260751
+]
+2016-05-03 15:33:57 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:33:57 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '222d0a12-4923-01cf-7511-f3cdf04abede'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59100'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260837.263
+    'REQUEST_TIME' => 1462260837
+]
+2016-05-03 15:34:59 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:34:59 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f22bfa2d-0ff5-1e1a-0f90-182855789035'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59101'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260899.348
+    'REQUEST_TIME' => 1462260899
+]
+2016-05-03 15:35:06 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:35:06 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c9a4a694-4311-a522-530f-f7e0d91962ef'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59102'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260906.712
+    'REQUEST_TIME' => 1462260906
+]
+2016-05-03 15:35:19 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:35:19 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'abd4d9a8-a575-5227-2447-171ca00399a5'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59113'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260919.45
+    'REQUEST_TIME' => 1462260919
+]
+2016-05-03 15:35:57 [::1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message '18996480894' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/models/User.php:164
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(83): restapi\models\User::findByAccount('18996480894')
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(47): restapi\modules\v1\models\LoginForm->getUser()
+#2 [internal function]: restapi\modules\v1\models\LoginForm->validatePassword('password', NULL)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/validators/Validator.php(243): yii\validators\InlineValidator->validateAttribute(Object(restapi\modules\v1\models\LoginForm), 'password')
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(restapi\modules\v1\models\LoginForm), Array)
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php(49): restapi\modules\v1\models\LoginForm->login()
+#8 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#9 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#12 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#13 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#15 {main}
+2016-05-03 15:35:57 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'fd5bd298-5303-b73a-adc2-e7c45e0503e9'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59115'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260957.765
+    'REQUEST_TIME' => 1462260957
+]
+2016-05-03 15:36:12 [::1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Hash is invalid.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Security.php:641
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/models/User.php(183): yii\base\Security->validatePassword('123456', 'e10adc3949ba59a...')
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(50): restapi\models\User->validatePassword('123456')
+#2 [internal function]: restapi\modules\v1\models\LoginForm->validatePassword('password', NULL)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/validators/Validator.php(243): yii\validators\InlineValidator->validateAttribute(Object(restapi\modules\v1\models\LoginForm), 'password')
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(restapi\modules\v1\models\LoginForm), Array)
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php(49): restapi\modules\v1\models\LoginForm->login()
+#8 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#9 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#12 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#13 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#15 {main}
+2016-05-03 15:36:12 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'db4bbe21-f482-d02a-3150-49a5d0773164'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59118'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462260972.318
+    'REQUEST_TIME' => 1462260972
+]
+2016-05-03 15:37:54 [::1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Hash is invalid.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Security.php:641
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/models/User.php(183): yii\base\Security->validatePassword('123456', '')
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(50): restapi\models\User->validatePassword('123456')
+#2 [internal function]: restapi\modules\v1\models\LoginForm->validatePassword('password', NULL)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/validators/Validator.php(243): yii\validators\InlineValidator->validateAttribute(Object(restapi\modules\v1\models\LoginForm), 'password')
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(restapi\modules\v1\models\LoginForm), Array)
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php(49): restapi\modules\v1\models\LoginForm->login()
+#8 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#9 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#12 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#13 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#15 {main}
+2016-05-03 15:37:54 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '82740179-dbe2-4783-c8c8-099c0045fe4b'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59121'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462261074.789
+    'REQUEST_TIME' => 1462261074
+]
+2016-05-03 15:38:33 [::1][-][-][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message '不存在该帐号.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/controllers/UserController.php:57
+Stack trace:
+#0 [internal function]: restapi\modules\v1\controllers\UserController->actionCheck()
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('check', Array)
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/check', Array)
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#7 {main}
+2016-05-03 15:38:33 [::1][-][-][info][application] $_POST = [
+    'account' => '18996480894'
+    'password' => '123456'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0860f0c6-9b61-8beb-8bb9-c5fc20b89588'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59124'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users/check'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users/check'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users/check'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users/check'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users/check'
+    'REQUEST_TIME_FLOAT' => 1462261113.769
+    'REQUEST_TIME' => 1462261113
+]
+2016-05-03 15:40:00 [::1][-][n5lbf0h2ti747mufa6h7r2dua2][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message '非法访问.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/ApiModule.php:30
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(142): restapi\modules\v1\ApiModule->beforeAction(Object(yii\base\InlineAction))
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/user/create', Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2016-05-03 15:40:00 [::1][-][n5lbf0h2ti747mufa6h7r2dua2][info][application] $_POST = [
+    'action' => 'create_user'
+    'mobile' => '18996480894'
+    'password' => '123456'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '53'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_ORIGIN' => 'file://'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_HTTP_REQUEST_TYPE' => 'android'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_HTTP_ACCESS_TOKEN' => 'fcdTqqtzfMiqZDRyNAhgNmvdyiyqRaRjZwSAPzUb'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_POSTMAN_TOKEN' => '58c53236-6fa0-c490-f495-0c194c08dec4'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59125'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/users'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/users'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/users'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/users'
+    'REQUEST_TIME_FLOAT' => 1462261200.801
+    'REQUEST_TIME' => 1462261200
+]
+2016-05-03 15:45:12 [::1][-][n5lbf0h2ti747mufa6h7r2dua2][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message '非法访问.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/ApiModule.php:30
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(142): restapi\modules\v1\ApiModule->beforeAction(Object(yii\rest\IndexAction))
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#2 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/address/inde...', Array)
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2016-05-03 15:45:12 [::1][-][n5lbf0h2ti747mufa6h7r2dua2][info][application] $_COOKIE = [
+    'PHPSESSID' => 'n5lbf0h2ti747mufa6h7r2dua2'
+    '_csrf' => '5a8db374801f2e75df3de02c0662784d3a52de70059e3c69f87810ea9c738f76a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VOiUQ-jdR1LmHq--UIyGr43Kq-GmNv4Z\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'HTTP_HTTP_REQUEST_TYPE' => 'android'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '51a410fc-4abe-1650-8af0-5943d30395d8'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_COOKIE' => 'PHPSESSID=n5lbf0h2ti747mufa6h7r2dua2; _csrf=5a8db374801f2e75df3de02c0662784d3a52de70059e3c69f87810ea9c738f76a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VOiUQ-jdR1LmHq--UIyGr43Kq-GmNv4Z%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59136'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/addresses'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/addresses'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/addresses'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/addresses'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/addresses'
+    'REQUEST_TIME_FLOAT' => 1462261512.614
+    'REQUEST_TIME' => 1462261512
+]
+2016-05-03 15:46:05 [::1][-][-][error][yii\web\HttpException:401] exception 'yii\web\UnauthorizedHttpException' with message 'You are requesting with an invalid credential.' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/filters/auth/AuthMethod.php:90
+Stack trace:
+#0 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/filters/auth/AuthMethod.php(73): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/ActionFilter.php(71): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\rest\IndexAction))
+#6 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\rest\IndexAction))
+#7 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#8 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/address/inde...', Array)
+#9 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-05-03 15:46:05 [::1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'n5lbf0h2ti747mufa6h7r2dua2'
+    '_csrf' => '5a8db374801f2e75df3de02c0662784d3a52de70059e3c69f87810ea9c738f76a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VOiUQ-jdR1LmHq--UIyGr43Kq-GmNv4Z\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5aedee1e-9de7-44c4-4fa9-838910c80a20'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_COOKIE' => 'PHPSESSID=n5lbf0h2ti747mufa6h7r2dua2; _csrf=5a8db374801f2e75df3de02c0662784d3a52de70059e3c69f87810ea9c738f76a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VOiUQ-jdR1LmHq--UIyGr43Kq-GmNv4Z%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59137'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/addresses'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/addresses'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/addresses'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/addresses'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/addresses'
+    'REQUEST_TIME_FLOAT' => 1462261565.187
+    'REQUEST_TIME' => 1462261565
+]
+2016-05-03 15:46:44 [::1][5][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'restapi\components\IdentityBehavior' not found' in /Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/modules/v1/models/Address.php:37
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-03 15:46:44 [::1][5][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'n5lbf0h2ti747mufa6h7r2dua2'
+    '_csrf' => '5a8db374801f2e75df3de02c0662784d3a52de70059e3c69f87810ea9c738f76a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VOiUQ-jdR1LmHq--UIyGr43Kq-GmNv4Z\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HTTP_DEVICE_TYPE' => 'android'
+    'HTTP_HTTP_TIMESTAMP' => '1456847324345'
+    'HTTP_HTTP_APP_VERSION' => '1.0'
+    'HTTP_HTTP_DEVICE_ID' => '99000566712916'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Postman/3.2.2.0 Chrome/45.0.2454.85 Electron/0.34.3 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ed0f21f9-f036-048c-7e3e-33e4c6b36130'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_COOKIE' => 'PHPSESSID=n5lbf0h2ti747mufa6h7r2dua2; _csrf=5a8db374801f2e75df3de02c0662784d3a52de70059e3c69f87810ea9c738f76a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VOiUQ-jdR1LmHq--UIyGr43Kq-GmNv4Z%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/5.5.32'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/wanghong/Documents/Workspace/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/wanghong/Documents/Workspace/PHP/LazyWaimai/restapi/web/index.php'
+    'REMOTE_PORT' => '59140'
+    'REDIRECT_URL' => '/LazyWaimai/restapi/web/v1/addresses'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/LazyWaimai/restapi/web/v1/addresses'
+    'SCRIPT_NAME' => '/LazyWaimai/restapi/web/index.php'
+    'PATH_INFO' => '/v1/addresses'
+    'PATH_TRANSLATED' => '/Users/wanghong/Documents/Workspace/PHP/v1/addresses'
+    'PHP_SELF' => '/LazyWaimai/restapi/web/index.php/v1/addresses'
+    'REQUEST_TIME_FLOAT' => 1462261604.034
+    'REQUEST_TIME' => 1462261604
+]

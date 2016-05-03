@@ -6,7 +6,7 @@ use Yii;
 use yii\db\Query;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
-use restapi\modules\v1\beans\DiscountInfo;
+use restapi\beans\DiscountInfo;
 
 /**
  * This is the model class for table "business_activity".

@@ -4,16 +4,14 @@ namespace restapi\modules\v1\controllers;
 
 use yii;
 use restapi\models\User;
-use restapi\models\Token;
 use common\helpers\Constants;
 use common\components\Ucpaas;
 use yii\rest\ActiveController;
-use yii\web\NotFoundHttpException;
 use restapi\modules\v1\models\Code;
+use restapi\modules\v1\models\LoginForm;
 use yii\web\ForbiddenHttpException;
 use yii\web\BadRequestHttpException;
 use yii\web\ServerErrorHttpException;
-
 
 class UserController extends ActiveController {
 
@@ -38,45 +36,31 @@ class UserController extends ActiveController {
 
     /**
      * 用户登录
-     * @return array|null|yii\db\ActiveRecord
-     * @throws BadRequestHttpException
      * @throws ForbiddenHttpException
-     * @throws NotFoundHttpException
      * @throws ServerErrorHttpException
+     * @return User|null
      */
     public function actionCheck() {
-        // 获取参数
-        $account = Yii::$app->request->getBodyParam('account');
-        $password = Yii::$app->request->getBodyParam('password');
-        if (empty($account)) {
-            throw new BadRequestHttpException('缺少必需的参数: account');
-        } else if (empty($password)) {
-            throw new BadRequestHttpException('缺少必需的参数: password');
-        }
-        // 检查帐号和密码
-        $model = User::findByAccount($account);
-        if ($model === null) {
-            throw new NotFoundHttpException('不存在该帐号');
-        } else if ($model->user_pwd !== md5($password)) {
-            throw new ForbiddenHttpException('密码不正确');
-        }
+        $model = new LoginForm();
 
-        // 更新登录时间
-        if ($model->save() === false) {
-            throw new ServerErrorHttpException('系统异常,请重试');
+        // 自动填充参数
+        $model->setAttributes(Yii::$app->request->getBodyParams());
+
+        if ($user = $model->login()) {
+            // 把access token放置到响应头里
+            Yii::$app->response->headers->add(Constants::HTTP_ACCESS_TOKEN, $user->access_token);
+
+            return $user;
+        } else {
+            // 将错误以异常的形式返回
+            $errors = $model->getFirstErrors();
+            $message = !empty($errors) ? reset($errors) : null;
+            if ($message) {
+                throw new ForbiddenHttpException($message);
+            } else {
+                throw new ServerErrorHttpException('系统异常,登录失败,请重试!');
+            }
         }
-
-        // 创建身份标识并存到数据库
-        $token = new Token();
-        $token->user_id = $model->id;
-        if ($token->save() === false) {
-            throw new ServerErrorHttpException('系统异常,请重试');
-        }
-
-        // 把token存入到响应头里
-        Yii::$app->response->headers->add(Constants::HTTP_ACCESS_TOKEN, $token->access_token);
-
-        return $model;
     }
 
     /**
@@ -114,7 +98,7 @@ class UserController extends ActiveController {
             throw new BadRequestHttpException('缺少必需的参数: mobile');
         }
         // 判断手机号是否已被注册
-        $model = User::findOne(['user_phone' => $mobile]);
+        $model = User::findOne(['mobile' => $mobile]);
         if ($model != null) {
             throw new BadRequestHttpException('该手机号已被注册');
         }
@@ -190,23 +174,13 @@ class UserController extends ActiveController {
         }
         // 创建新用户并存到数据库
         $model = new User();
-        $model->user_phone = $mobile;
-        $model->user_pwd = md5($password);
+        $model->mobile = $mobile;
+        $model->setPassword($password);
         $model->avatar_url = Yii::$app->params[Constants::USER_DEFAULT_AVATAR];
-        $model->user_name = 'lazy'.Yii::$app->security->generateRandomString(8); // 随机生成用户名
+        $model->username = 'lazy'.Yii::$app->security->generateRandomString(8); // 随机生成用户名
         if ($model->save() === false) {
             throw new ServerErrorHttpException('系统异常,请重试');
         }
-
-        // 创建身份标识并存到数据库
-        $token = new Token();
-        $token->user_id = $model->id;
-        if ($token->save() === false) {
-            throw new ServerErrorHttpException('系统异常,请重试');
-        }
-
-        // 把token存入到响应头里
-        Yii::$app->response->headers->add('HTTP-ACCESS-TOKEN', $token->access_token);
 
         return $model;
     }

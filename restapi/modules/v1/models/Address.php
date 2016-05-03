@@ -5,7 +5,7 @@ namespace restapi\modules\v1\models;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
-use restapi\components\IdentityBehavior;
+use common\filters\IdentityBehavior;
 
 /**
  * This is the model class for table "address".
